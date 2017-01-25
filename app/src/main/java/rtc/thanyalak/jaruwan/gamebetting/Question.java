@@ -1,5 +1,6 @@
 package rtc.thanyalak.jaruwan.gamebetting;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -76,11 +77,13 @@ public class Question extends AppCompatActivity {
             String strJSON = mySynChronize.get();
             Log.d(tag, "JSON ==> " + strJSON);
 
+
             if (strJSON.length() != 0) {
                 mySynChronize.progressDialog.dismiss();
             }
 
             JSONArray jsonArray = new JSONArray(strJSON);
+            Log.d("25janV1", "จำนวน Record ที่่อ่านได้ ==> " + jsonArray.length());
             questionStrings = new String[jsonArray.length()];
             choice1Strings = new String[jsonArray.length()];
             choice2Strings = new String[jsonArray.length()];
@@ -154,8 +157,12 @@ public class Question extends AppCompatActivity {
                     changeView(indexAnInt);
                 }
 
+                if (Integer.parseInt(moneyTextView.getText().toString()) == 0) {
+                    startActivity(new Intent(Question.this, Overgame.class));
+                }
 
-                //startActivity(new Intent(Question.this,Answer.class));
+
+
             }   // onClick
         });
 
