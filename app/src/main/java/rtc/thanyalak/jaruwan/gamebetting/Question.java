@@ -101,12 +101,14 @@ public class Question extends AppCompatActivity {
                 choice3Strings[i] = jsonObject.getString("Choice3");
                 choice4Strings[i] = jsonObject.getString("Choice4");
                 answerStrings[i] = jsonObject.getString("Answer"); // 1,2,3,4
-                answerInts[i] = Integer.parseInt(answerStrings[i]);
+                answerInts[i] = Integer.parseInt(answerStrings[i].trim());
+
+                Log.d("25janV1", "question(" + i + ") ==> " + questionStrings[i]);
 
             }   //for
 
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.d("25janV1", "e ==> " + e.toString());
         }
 
     }
@@ -154,9 +156,11 @@ public class Question extends AppCompatActivity {
 
                     //สิ่งที่ต้องทำ
                     indexAnInt += 1;
+                    Log.d("16janV2", "indexAnInt ==> " + indexAnInt);
                     changeView(indexAnInt);
                 }
 
+                //ถ้าคะแนน  หมด
                 if (Integer.parseInt(moneyTextView.getText().toString()) == 0) {
                     startActivity(new Intent(Question.this, Overgame.class));
                 }
