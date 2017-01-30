@@ -24,16 +24,6 @@
         android:layout_marginTop="20dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView4"
-        android:textSize="30sp"
-        android:textStyle="normal|bold"
-        android:layout_alignParentRight="true"
-        tools:ignore="HardcodedText,RelativeOverlap,RtlHardcoded"
-        tools:text="1" />
-
-    <TextView
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -169,6 +159,27 @@
     </LinearLayout>
 
     <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/cats"
+        android:id="@+id/imageView13"
+        tools:ignore="ContentDescription,UnknownId"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textSize="30sp"
+        android:textStyle="normal|bold"
+        tools:ignore="HardcodedText,RelativeOverlap,RtlHardcoded"
+        tools:text="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
         app:srcCompat="@drawable/ab"
         android:id="@+id/imageView3"
         tools:ignore="ContentDescription"
@@ -177,15 +188,5 @@
         android:layout_marginBottom="60dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="90dp"
-        app:srcCompat="@drawable/cats"
-        android:id="@+id/imageView13"
-        tools:ignore="ContentDescription,UnknownId"
-        android:layout_alignBottom="@+id/linearLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="181dp" />
 
 </RelativeLayout>

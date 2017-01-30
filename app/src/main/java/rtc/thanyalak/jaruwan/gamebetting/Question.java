@@ -28,6 +28,7 @@ public class Question extends AppCompatActivity {
     private int choice1AnInt, choice2AnInt, choice3AnInt, choice4AnInt;
     private int[] answerInts;
     private int sumChoice;
+    private TextView myAnswerTextView;
 
 
     @Override
@@ -65,6 +66,7 @@ public class Question extends AppCompatActivity {
         chice2EditText = (EditText) findViewById(R.id.editText2);
         chice3EditText = (EditText) findViewById(R.id.editText3);
         chice4EditText = (EditText) findViewById(R.id.editText4);
+        myAnswerTextView = (TextView) findViewById(R.id.textView4);
 
     }
 
@@ -243,6 +245,7 @@ public class Question extends AppCompatActivity {
         choice2TextView.setText("ข. " + choice2Strings[indexAnInt]);
         choice3TextView.setText("ค. " + choice3Strings[indexAnInt]);
         choice4TextView.setText("ง. " + choice4Strings[indexAnInt]);
+        myAnswerTextView.setText(answerStrings[indexAnInt]);
 
         //Clear Edti
         chice1EditText.setText("");
