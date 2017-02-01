@@ -198,6 +198,10 @@ public class Question extends AppCompatActivity {
         moneyAnInt = moneyAnInt - (sumChoice - trueAnswer);
         Log.d("16janV2", "current money ==> " + moneyAnInt);
 
+        MyAlert myAlert = new MyAlert(Question.this);
+        myAlert.myDialog("เฉลย", "คำตอบที่ถูกคื่อข้อ " + answerInts[indexAnInt]);
+
+
     }   // checkScore
 
     private boolean checkSumMoney() {
