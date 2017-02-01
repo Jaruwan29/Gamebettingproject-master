@@ -174,7 +174,6 @@
         android:textSize="30sp"
         android:textStyle="normal|bold"
         tools:ignore="HardcodedText,RelativeOverlap,RtlHardcoded"
-        tools:text="1"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />

@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -28,7 +29,7 @@ public class Question extends AppCompatActivity {
     private int choice1AnInt, choice2AnInt, choice3AnInt, choice4AnInt;
     private int[] answerInts;
     private int sumChoice;
-    private TextView myAnswerTextView;
+
 
 
     @Override
@@ -66,7 +67,7 @@ public class Question extends AppCompatActivity {
         chice2EditText = (EditText) findViewById(R.id.editText2);
         chice3EditText = (EditText) findViewById(R.id.editText3);
         chice4EditText = (EditText) findViewById(R.id.editText4);
-        myAnswerTextView = (TextView) findViewById(R.id.textView4);
+
 
     }
 
@@ -164,7 +165,7 @@ public class Question extends AppCompatActivity {
 
                 //ถ้าคะแนน  หมด
                 if (Integer.parseInt(moneyTextView.getText().toString()) == 0) {
-                    startActivity(new Intent(Question.this, Overgame.class));
+                    startActivity(new Intent (Question.this,Overgame.class));
                 }
 
 
@@ -199,7 +200,7 @@ public class Question extends AppCompatActivity {
         Log.d("16janV2", "current money ==> " + moneyAnInt);
 
         MyAlert myAlert = new MyAlert(Question.this);
-        myAlert.myDialog("เฉลย", "คำตอบที่ถูกคื่อข้อ " + answerInts[indexAnInt]);
+        myAlert.myDialog("เฉลย", "คำตอบที่ถูกคือข้อ " + answerInts[indexAnInt]);
 
 
     }   // checkScore
@@ -245,11 +246,11 @@ public class Question extends AppCompatActivity {
 
         moneyTextView.setText(Integer.toString(moneyAnInt));
         questionTextView.setText(Integer.toString(indexAnInt + 1) + ". " + questionStrings[indexAnInt]);
-        choice1TextView.setText("ก. " + choice1Strings[indexAnInt]);
-        choice2TextView.setText("ข. " + choice2Strings[indexAnInt]);
-        choice3TextView.setText("ค. " + choice3Strings[indexAnInt]);
-        choice4TextView.setText("ง. " + choice4Strings[indexAnInt]);
-        myAnswerTextView.setText(answerStrings[indexAnInt]);
+        choice1TextView.setText("1. " + choice1Strings[indexAnInt]);
+        choice2TextView.setText("2. " + choice2Strings[indexAnInt]);
+        choice3TextView.setText("3. " + choice3Strings[indexAnInt]);
+        choice4TextView.setText("4. " + choice4Strings[indexAnInt]);
+
 
         //Clear Edti
         chice1EditText.setText("");
