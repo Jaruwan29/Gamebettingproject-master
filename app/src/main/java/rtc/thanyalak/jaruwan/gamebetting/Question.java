@@ -2,13 +2,13 @@ package rtc.thanyalak.jaruwan.gamebetting;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -165,7 +165,15 @@ public class Question extends AppCompatActivity {
 
                 //ถ้าคะแนน  หมด
                 if (Integer.parseInt(moneyTextView.getText().toString()) == 0) {
-                    startActivity(new Intent (Question.this,Overgame.class));
+
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            startActivity(new Intent(Question.this,Overgame.class));
+                        }
+                    },3000);
+
                 }
 
 
